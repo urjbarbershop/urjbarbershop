@@ -60,6 +60,12 @@
           and take a screenshot of the successful payment.
         </p>
 
+        <div class="price-box" style="margin-top:2rem;">
+          <h3>Beard Trim + Line-up <small style="color:var(--gray);font-weight:normal;">(Friday only)</small></h3>
+          <div class="price">100 KGS</div>
+          <p style="margin-top:1rem; color:var(--gray);">20-minute appointment • Prepayment required</p>
+        </div>
+
         <!-- ONE CARD ONLY – change the number and name to yours -->
         <div style="background:white; padding:3rem 2rem; border-radius:20px; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.12);">
           <h3 style="color:var(--gold); margin-bottom:1rem;">KICB</h3>
@@ -96,21 +102,24 @@
       <form id="bookingForm">
         <input type="text" placeholder="Your Full Name" required>
         <input type="tel" placeholder="Your Phone Number" required>
-        
+
+        <!-- NEW: Service selector -->
+        <label><strong>Select Service</strong></label>
+        <select id="serviceType" required style="padding:1rem; font-size:1.1rem;">
+          <option value="" disabled selected>Choose service</option>
+          <option value="haircut">Men's Haircut – 400 KGS (Sat–Sun only)</option>
+          <option value="beard">Beard Trim + Line-up – 100 KGS (Friday only)</option>
+        </select>
+
         <label><strong>Upload Payment Proof (screenshot)</strong></label>
         <input type="file" id="paymentProof" accept="image/*" required>
-        
-        <label><strong>Choose Date (Saturday or Sunday only)</strong></label>
-        <label><strong>Choose Date (Saturday or Sunday only)</strong></label>
+
+        <label><strong>Choose Date</strong></label>
         <input type="date" id="bookingDate" min="" required style="padding:1rem; font-size:1.1rem;">
-        
+
         <label><strong>Preferred Time</strong></label>
-        <select required>
-          <option value="" disabled selected>Select time</option>
-          <option value="10:00 – 11:30">10:00 – 11:30</option>
-          <option value="11:30 – 13:00">11:30 – 13:00</option>
-          <option value="14:00 – 15:30">14:00 – 15:30</option>
-          <option value="15:30 – 17:00">15:30 – 17:00</option>
+        <select id="timeSelect" required>
+          <option value="" disabled selected>Select time (will appear after choosing date)</option>
         </select>
 
         <button type="submit" class="btn">Complete Booking</button>
