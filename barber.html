@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>URG Barbershop | UCA</title>
+  <meta name="description" content="Professional men's haircut in Bishkek. Only 400 KGS. Booking only on weekends with prepayment.">
+  <link href="barber.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- EASY CLOSE SWITCH FOR AMIN - NO CODING NEEDED -->
+<div id="closedOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#1a1a1a; color:white; z-index:99999; text-align:center; padding:80px 20px; font-family:'Inter',sans-serif;">
+  <h1 style="font-size:4rem; color:#D4AF37;">Temporarily Closed</h1>
+  <p style="font-size:1.8rem; max-width:800px; margin:2rem auto; line-height:1.8;">
+    Sorry bro, the barbershop is closed right now.<br>
+    We will be back soon!
+  </p>
+  <p style="font-size:1.6rem; margin-top:3rem;">
+    Questions? Write Amin on WhatsApp<br>
+    <strong style="font-size:2rem;">+996 552 766 222</strong>
+  </p>
+</div>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">URJ Barbershop</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#price">Price</a>
+        <a href="#book">Book Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div>
+      <h1>URJ Barbershop</h1>
+      <p>Professional Men's Haircut at UCA<br>Only 400 KGS • Weekend Booking Only</p>
+      <a href="#book" class="btn">Book Appointment</a>
+    </div>
+  </section>
+
+    <!-- Price & Payment – ONE CARD ONLY -->
+  <section id="price">
+    <div class="container">
+      <h2 class="section-title">Price & Payment</h2>
+      <div class="price-box">
+        <h3>Men's Haircut</h3>
+        <div class="price">400 KGS</div>
+        <p style="margin-top:1rem; color:var(--gray);">Full haircut + styling</p>
+      </div>
+
+      <div class="payment-info">
+        <h3>Step 1: Send 400 KGS (Prepayment)</h3>
+        <p style="font-size:1.3rem; margin:2rem 0;">
+          Transfer exactly <strong>400 KGS</strong> to the KICB card below<br>
+          and take a screenshot of the successful payment.
+        </p>
+
+        <!-- ONE CARD ONLY – change the number and name to yours -->
+        <div style="background:white; padding:3rem 2rem; border-radius:20px; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.12);">
+          <h3 style="color:var(--gold); margin-bottom:1rem;">KICB</h3>
+
+          <p class="qr">QR</p>
+
+          <img class="QR-code" src="shared image.jpeg" alt="URJ">
+
+          <p>WhatsApp number</p>
+          
+          <p style="font-weight:bold; color:var(--dark); margin:1.5rem 0; letter-spacing:3px;">
+            +996 552 766 222
+          </p>
+
+          <!-- Optional QR (many people still like it) -->
+          
+          <p style="margin-top:1.5rem; color:#777;">
+            Name: Amin • After payment upload screenshot in the form below
+          </p>
+        </div>
+
+        <p style="margin-top:3rem; color: black; font-weight:bold;">
+          Booking is confirmed only after we receive the 400 KGS payment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="book">
+    <div class="container">
+      <h2 class="section-title"> Complete Your Booking</h2>
+      
+      <form id="bookingForm">
+        <input type="text" placeholder="Your Full Name" required>
+        <input type="tel" placeholder="Your Phone Number" required>
+        
+        <label><strong>Upload Payment Proof (screenshot)</strong></label>
+        <input type="file" id="paymentProof" accept="image/*" required>
+        
+        <label><strong>Choose Date (Saturday or Sunday only)</strong></label>
+        <label><strong>Choose Date (Saturday or Sunday only)</strong></label>
+        <input type="date" id="bookingDate" min="" required style="padding:1rem; font-size:1.1rem;">
+        
+        <label><strong>Preferred Time</strong></label>
+        <select required>
+          <option value="" disabled selected>Select time</option>
+          <option value="10:00 – 11:30">10:00 – 11:30</option>
+          <option value="11:30 – 13:00">11:30 – 13:00</option>
+          <option value="14:00 – 15:30">14:00 – 15:30</option>
+          <option value="15:30 – 17:00">15:30 – 17:00</option>
+        </select>
+
+        <button type="submit" class="btn">Complete Booking</button>
+      </form>
+
+      <div id="successMessage" class="success hidden">
+        <h3>Booking Confirmed!</h3>
+        <p>We received your payment and booking. The Master will contact you soon.<br>Thank you!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <h2 style="color:var(--gold);">URJ Barbershop</h2>
+      <p>Naryn, UCA • Open Saturday & Sunday Only</p>
+      <p>WhatsApp: +996 552 766 222</p>
+      <p>Telegram: +996 552 766 222</p>
+      <a>Instagram:</a> <a class="insta" target="_blank" href="https://www.instagram.com/_a1imamad0v_/">_a1imamad0v_</a>
+      <div class="social">
+        <a class="inst" href="#">Instagram</a>
+        <a class="whats" href="#">WhatsApp</a>
+        <a class="teleg" href="#">Telegram</a>
+      </div>
+      <p>&copy; 2025 URJ Barbershop</p>
+    </div>
+  </footer>
+
+  <script src="script.js">
+</script>
+</body>
+</html>
