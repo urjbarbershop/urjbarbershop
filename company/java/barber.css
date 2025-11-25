@@ -1,0 +1,80 @@
+    :root {
+      --gold: #D4AF37;
+      --dark: #1a1a1a;
+      --light: #fafafa;
+      --gray: #555;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; background:var(--light); color:var(--gray); line-height:1.7; }
+    h1,h2,h3 { font-family: 'Playfair Display', serif; color:var(--dark); }
+
+    header {
+      background:var(--dark); color:white; position:fixed; width:100%; top:0; z-index:1000;
+      box-shadow:0 4px 20px rgba(0,0,0,0.2);
+    }
+    nav {
+      max-width:1200px; margin:0 auto; padding:1.5rem 1rem; display: flex; justify-content:space-between; align-items:center;
+    }
+    .logo { font-size:2.8rem; color: var(--gold); font-weight:700; }
+    .logo:hover{font-size: 50px; transition: 0.3s;}
+    .nav-links a { color:white; margin:0 1.2rem; font-weight:500; text-decoration:none; transition:0.3s; }
+    .nav-links a:hover { color:var(--gold); font-size: larger; font-weight: bold;}
+
+    .hero {
+      height:100vh;
+      background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+                  url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80') center/cover no-repeat;
+      display:flex; align-items:center; justify-content:center; text-align:center; color:white;
+      padding-top:100px;
+    }
+    .hero h1 { font-size:4.6rem; margin-bottom:1rem; }
+    .hero p { font-size:1.4rem; max-width:700px; margin:0 auto 2rem; }
+    .btn {
+      background:var(--gold); color:var(--dark); padding:1rem 2.5rem; border-radius:50px;
+      font-weight:700; font-size:1.1rem; cursor:pointer; transition:0.3s; display:inline-block; text-decoration:none;
+    }
+    .btn:hover { background:#e6c757; transform:scale(1.05); }
+
+    section { padding:100px 20px; }
+    .container { max-width:1100px; margin:0 auto; color: var(--gray);}
+    .section-title { text-align:center; font-size:3.2rem; color:var(--gold); margin-bottom:3rem; }
+
+    .price-box {
+      background:white; padding:3rem; border-radius:20px; text-align:center;
+      box-shadow:0 15px 40px rgba(0,0,0,0.1); max-width:500px; margin:0 auto 4rem;
+      cursor: pointer;
+    
+    }
+    .price { font-size:5rem; color:var(--gold); font-weight:bold; }
+    .payment-info { background:#f5f5f5; padding:2rem; border-radius:15px; margin:3rem 0; text-align:center; }
+    .qr-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:2rem; margin:2rem 0; }
+    .qr-item img { width:100%; max-width:280px; border:8px solid white; box-shadow:0 10px 30px rgba(0,0,0,0.2); border-radius:10px; }
+
+    form { max-width:600px; margin:0 auto; background:white; padding:3rem; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.1); }
+    input, select, textarea { width:100%; padding:1rem; margin:1rem 0; border:2px solid #ddd; border-radius:10px; font-family:inherit; }
+    input:focus, select:focus { border-color:var(--gold); outline:none; }
+    .hidden { display:none; }
+    .success { text-align:center; padding:4rem; font-size:1.5rem; color:green; }
+
+    footer { background:var(--dark); color:rgb(114, 106, 202); text-align:center; padding:4rem 20px; }
+    .social a { color:var(--gold); font-size:2rem; margin:0 1rem; }
+    .teleg:hover{font-size: 40px; transition: 0.3s;}
+    .whats:hover{font-size: 40px; transition: 0.3s;}
+    .inst:hover{font-size: 40px; transition: 0.3s;}
+
+    @media (max-width:768px) {
+      .hero h1 { font-size:3rem; }
+      .nav-links { display:none; }
+      .qr-grid { grid-template-columns:1fr; }
+    }
+
+    .QR-code{
+      width: 300px;
+    }
+
+    .qr{
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .insta:hover{color: rgb(104, 106, 180); transition: 0.3s; font-size: 17px;}
