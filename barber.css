@@ -111,3 +111,18 @@
   h1 { font-size: 1.6rem !important; }
   .time-slot { font-size: 13px !important; padding: 10px 8px !important; }
 }
+
+/* KILL inline styles on mobile – this beats everything */
+@media screen and (max-width: 768px) {
+  .time-slot,
+  .time-slot[style],
+  button[style],
+  input[style],
+  select[style] {
+    font-size: 15px !important;
+    padding: 12px 10px !important;
+    margin: 5px 3px !important;
+    min-height: auto !important;
+    line-height: normal !important;
+  }
+}
