@@ -78,3 +78,15 @@
     }
 
     .insta:hover{color: rgb(104, 106, 180); transition: 0.3s; font-size: 17px;}
+
+    @media (max-width: 480px) {
+  body { font-size: 14px; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  .time-slot {
+    font-size: 14px !important;
+    padding: 10px 8px !important;
+    margin: 5px 3px !important;
+  }
+  label, select, input, button { font-size: 14px !important; }
+}
