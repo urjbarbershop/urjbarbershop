@@ -79,50 +79,66 @@
 
     .insta:hover{color: rgb(104, 106, 180); transition: 0.3s; font-size: 17px;}
 
-    /* FORCE mobile-friendly sizes – works even if other rules fight us */
-@media screen and (max-width: 768px) {
-  * {
-    font-size: 15px !important;
+    /* Beautiful mobile menu instead of disappearing */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--dark);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    transform: translateY(-150%);
+    transition: transform 0.4s ease;
+    z-index: 999;
   }
   
-  h1 { font-size: 1.8rem !important; }
-  h2, h3 { font-size: 1.4rem !important; }
-  
-  .time-slot {
-    font-size: 14px !important;
-    padding: 11px 10px !important;
-    margin: 5px 3px !important;
-    min-height: unset !important;
+  .nav-links.active {
+    transform: translateY(0);
   }
   
-  button, input, select, label {
-    font-size: 15px !important;
-    padding: 12px 10px !important;
+  .nav-links a {
+    margin: 1rem 0;
+    font-size: 1.4rem;
   }
   
-  .service-selection, .calendar-container, .booking-form {
-    padding: 12px !important;
+  /* Hamburger icon */
+  .hamburger {
+    display: block !important;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.3s;
   }
 }
 
-/* Extra small phones (iPhone SE, etc.) */
-@media screen and (max-width: 380px) {
-  * { font-size: 14px !important; }
-  h1 { font-size: 1.6rem !important; }
-  .time-slot { font-size: 13px !important; padding: 10px 8px !important; }
-}
+/* Hide hamburger on desktop */
+.hamburger { display: none; }
 
-/* KILL inline styles on mobile – this beats everything */
+/* Fix QR code overflowing on mobile */
 @media screen and (max-width: 768px) {
-  .time-slot,
-  .time-slot[style],
-  button[style],
-  input[style],
-  select[style] {
-    font-size: 15px !important;
-    padding: 12px 10px !important;
-    margin: 5px 3px !important;
-    min-height: auto !important;
-    line-height: normal !important;
+  .QR-code {
+    width: 100% !important;
+    max-width: 240px !important;
+    height: auto !important;
+  }
+  
+  .qr-item img {
+    width: 100% !important;
+    max-width: 260px !important;
+    border-width: 6px !important;
+  }
+  
+  .qr-grid {
+    gap: 1.5rem !important;
+    padding: 0 10px !important;
   }
 }
