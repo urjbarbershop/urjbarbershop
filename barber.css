@@ -79,66 +79,59 @@
 
     .insta:hover{color: rgb(104, 106, 180); transition: 0.3s; font-size: 17px;}
 
-    /* Beautiful mobile menu instead of disappearing */
+    /* ←←← FINAL MOBILE FIX – paste this as the VERY LAST thing in your CSS →→→ */
 @media (max-width: 768px) {
+  /* Hero text */
+  .hero h1 { font-size: 2.8rem !important; }
+  .hero p { font-size: 1.1rem !important; }
+
+  /* QR code stays inside box */
+  .QR-code, .qr-item img {
+    width: 100% !important;
+    max-width: 260px !important;
+    height: auto !important;
+    border-width: 6px !important;
+  }
+
+  /* Kill ALL giant text and inline styles */
+  *, *::before, *::after {
+    font-size: 15px !important;
+  }
+  h1, h2, h3, .section-title { font-size: 1.9rem !important; }
+  .logo { font-size: 2rem !important; }
+  .time-slot, button, input, select, label, .btn {
+    font-size: 15px !important;
+    padding: 12px 10px !important;
+    min-height: auto !important;
+  }
+
+  /* Hamburger menu (this brings back Home / Price / Book Now) */
   .nav-links {
     position: fixed;
     top: 80px;
     left: 0;
     width: 100%;
     background: var(--dark);
-    display: flex !important;
     flex-direction: column;
-    align-items: center;
-    padding: 1.5rem 0;
-    transform: translateY(-150%);
-    transition: transform 0.4s ease;
+    padding: 2rem 0;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform 0.35s ease;
     z-index: 999;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
   }
-  
-  .nav-links.active {
-    transform: translateY(0);
-  }
-  
+  .nav-links.active { transform: translateY(0); }
   .nav-links a {
-    margin: 1rem 0;
-    font-size: 1.4rem;
+    margin: 1rem 0 !important;
+    font-size: 1.4rem !important;
+    display: block;
   }
-  
-  /* Hamburger icon */
-  .hamburger {
-    display: block !important;
-    cursor: pointer;
-  }
-  
+  .hamburger { display: block !important; cursor: pointer; }
   .hamburger div {
     width: 30px;
     height: 3px;
     background: white;
     margin: 6px 0;
     transition: 0.3s;
-  }
-}
-
-/* Hide hamburger on desktop */
-.hamburger { display: none; }
-
-/* Fix QR code overflowing on mobile */
-@media screen and (max-width: 768px) {
-  .QR-code {
-    width: 100% !important;
-    max-width: 240px !important;
-    height: auto !important;
-  }
-  
-  .qr-item img {
-    width: 100% !important;
-    max-width: 260px !important;
-    border-width: 6px !important;
-  }
-  
-  .qr-grid {
-    gap: 1.5rem !important;
-    padding: 0 10px !important;
   }
 }
