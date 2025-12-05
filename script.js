@@ -3,7 +3,7 @@ const SHEETDB_API = 'https://sheetdb.io/api/v1/ogo8z9ar4h5tb';
 // Min date = today (strictly no past dates)
 const today = new Date().toISOString().split('T')[0];
 document.getElementById('bookingDate').min = today;
-document.getElementById('bookingDate').value = '';  // Clear any old value
+document.getElementById('bookingDate').value = '';  
 
 // Haircut slots (Sat–Sun) – 90 minutes each, lunch excluded (12-13:30)
 const haircutSlots = [

@@ -25,8 +25,12 @@
   <!-- Header -->
   <header>
   <nav>
+    
     <!-- Logo -->
-    <div class="logo">URJ Barbershop</div>  
+<div class="logo">
+  <img loading="lazy" src="wolf-logo.webp" alt="URJ Wolf Logo" class="wolf-logo">
+  <span>URJ Barbershop</span>
+</div>  
 
     <!-- HAMBURGER (this appears only on phone) -->
     <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
@@ -34,6 +38,7 @@
       <div></div>
       <div></div>
     </div>
+
 
     <!-- Menu links (hidden on phone until you tap hamburger) -->
     <div class="nav-links">
@@ -59,7 +64,7 @@
     <div class="container">
       <h2 class="section-title">Price & Payment</h2>
       <div class="price-box">
-        <h3>Men's Haircut</h3>
+        <h3>Men's Haircut <small style="color:var(--gray);font-weight:normal;">(Saturday and Sunkday)</small></h3>
         <div class="price">400 KGS</div>
         <p style="margin-top:1rem; color:var(--gray);">Full haircut + styling</p>
       </div>
